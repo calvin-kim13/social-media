@@ -39,7 +39,7 @@ const Input: React.FC<InputProps> = ({
           focus:border-sky-500
           focus:border-2
           transition
-          disabled:bg-neutral-900
+          disabled:bg-neutral-300
           disabled:opacity-70
           disabled:cursor-not-allowed
         "
