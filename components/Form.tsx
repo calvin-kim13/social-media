@@ -68,12 +68,12 @@ const Form: React.FC<FormProps> = ({ placeholder, isComment, postId }) => {
                 resize-none 
                 mt-3 
                 w-full 
-                bg-black 
+                bg-white 
                 ring-0 
                 outline-none 
                 text-[20px] 
                 placeholder-neutral-500 
-                text-white
+                text-black
               "
               placeholder={placeholder}
             ></textarea>
@@ -97,7 +97,7 @@ const Form: React.FC<FormProps> = ({ placeholder, isComment, postId }) => {
         </div>
       ) : (
         <div className="py-8">
-          <h1 className="text-white text-2xl text-center mb-4 font-bold">
+          <h1 className="text-black text-2xl text-center mb-4 font-bold">
             Welcome to Twitter
           </h1>
           <div className="flex flex-row items-center justify-center gap-4">

@@ -3,10 +3,10 @@ import { BsTwitter } from "react-icons/bs";
 
 const SidebarLogo = () => {
   const router = useRouter();
-  
+
   return (
-    <div 
-      onClick={() => router.push('/')}
+    <div
+      onClick={() => router.push("/")}
       className="
         rounded-full 
         h-14
@@ -18,8 +18,9 @@ const SidebarLogo = () => {
         hover:bg-blue-300 
         hover:bg-opacity-10 
         cursor-pointer
-    ">
-      <BsTwitter size={28} color="white" />
+    "
+    >
+      <BsTwitter size={28} color="0ea5e9" />
     </div>
   );
 };

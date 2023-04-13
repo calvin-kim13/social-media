@@ -8,9 +8,11 @@ import Header from "@/components/Header";
 import UserBio from "@/components/users/UserBio";
 import UserHero from "@/components/users/UserHero";
 import Form from "@/components/Form";
+import useCurrentUser from "@/hooks/useCurrentUser";
 
 const UserView = () => {
   const router = useRouter();
+  const { data: currentUser } = useCurrentUser();
   const { userId } = router.query;
 
   const { data: fetchedUser, isLoading } = useUser(userId as string);
@@ -28,7 +30,7 @@ const UserView = () => {
       <Header showBackArrow label={fetchedUser?.name} />
       <UserHero userId={userId as string} />
       <UserBio userId={userId as string} />
-      <Form placeholder="What's happening?" />
+      {currentUser?.id === userId && <Form placeholder="What's happening?" />}
       <PostFeed userId={userId as string} />
     </>
   );
